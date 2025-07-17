@@ -6,48 +6,47 @@
 % Paquetes
 %%%%%%%%%%%%
 % Idioma y codificación
-\usepackage[spanish]{babel}             % Traduce elementos automáticos al español
-\usepackage[utf8]{inputenc}             % Permite el uso de caracteres acentuados
-\usepackage[T1]{fontenc}                % Salida adecuada para caracteres acentuados
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 % Tipografía y espaciado
-\usepackage{lmodern}                    % Fuente Latin Modern
-\usepackage{setspace}                   % Control del interlineado
-\onehalfspacing                        % Interlineado 1.5
+\usepackage{lmodern}
+\usepackage{setspace}
+\onehalfspacing
 
 % Geometría de página
-\usepackage{geometry}                  % Configura los márgenes
+\usepackage{geometry}
 \geometry{left=3cm,right=2cm,top=2.5cm,bottom=3cm}
 
 % Encabezados y pies de página
-\usepackage{fancyhdr}                  % Encabezados/pies personalizados
+\usepackage{fancyhdr}
 
 % Autores
-\usepackage{authblk}                   % Manejo de afiliaciones de autores
-% NOTA: si desea eliminar "and" entre autores, consulte el método alternativo.
+\usepackage{authblk}
 
 % Matemática
-\usepackage{amsmath,amssymb,amsfonts} % Paquetes matemáticos estándar
+\usepackage{amsmath,amssymb,amsfonts}
 
 % Gráficos y figuras
-\usepackage{graphicx}                  % Inclusión de imágenes
-\usepackage{caption}                   % Personalización de captions
-\captionsetup[table]{position=bottom}  % Título de tabla debajo de la tabla
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}} % Cambiar "Cuadro" por "Tabla"
-\usepackage{caption,subcaption}        % Subfiguras y formato de captions
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[table]{position=bottom}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\usepackage{caption,subcaption}
 
 % Colores y tablas
-\usepackage{xcolor,colortbl}          % Definición de colores y celdas coloreadas
-\usepackage{booktabs}                 % Mejor estilo para tablas
-\usepackage{tabularx}                 % Tablas de ancho ajustable
-\usepackage{float}                    % Control sobre la posición de elementos flotantes
+\usepackage{xcolor,colortbl}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{float}
 
 % Unidades y química
-\usepackage{siunitx}                  % Formato de unidades físicas
-\usepackage{mhchem}                   % Escribir ecuaciones químicas
+\usepackage{siunitx}
+\usepackage{mhchem}
 
 % Hipervínculos
-\usepackage{hyperref}                 % Enlaces en PDF
+\usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=black,
@@ -56,18 +55,23 @@
 }
 
 % Otros
-\usepackage{tcolorbox}                % Cajas de color para resaltar contenido
-\usepackage{listings}                 % Inclusión de código fuente
-\usepackage{lipsum}                   % Texto de ejemplo
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{lipsum}
 
 % Bibliografía
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Manejo moderno de bibliografía
-\addbibresource{references.bib}       % Archivo de bibliografía
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+% Secciones un punto más grande
+\usepackage{sectsty}
+\sectionfont{\fontsize{14}{16}\selectfont}
+\subsectionfont{\fontsize{13}{16}\selectfont}
 
 %%%%%%%%%%%%%
 % Estilo de ecuaciones
 %%%%%%%%%%%%%
-\numberwithin{equation}{section}      % Numeración por sección
+\numberwithin{equation}{section}
 
 %%%%%%%%%%%%%
 % Estilo encabezado
@@ -104,8 +108,13 @@
 	\maketitle
 	
 	\begin{abstract}
-		\noindent
+		\noindent\rule{\textwidth}{0.4pt}
+		\vspace{0.5em}
+		
 		El resumen es una versión condensada del informe, usualmente entre 100 y 200 palabras. Incluye el contexto, el problema abordado, la metodología empleada y los principales resultados/conclusiones.
+		
+		\vspace{0.5em}
+		\noindent\rule{\textwidth}{0.4pt}
 	\end{abstract}
 	
 	%%%%%%%%%%%%%%%
@@ -172,6 +181,11 @@
 		\item Resume los hallazgos clave.
 		\item Compara resultados con literatura.
 		\item Sugiere mejoras o investigaciones futuras.
+		\item Ejemplo de segundo orden:
+		\begin{itemize}
+			\item Esta viñeta es de segundo nivel y es un punto más pequeña.
+			\item Todas las viñetas anidadas tienen el tamaño ajustado automáticamente.
+		\end{itemize}
 	\end{itemize}
 	
 	%%%%%%%%%%%%%%%
